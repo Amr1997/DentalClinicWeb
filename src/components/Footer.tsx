@@ -66,14 +66,14 @@ const Footer: React.FC = () => {
                 <Phone className="w-5 h-5" />
                 <span>{t('footer.contact.phone')}</span>
               </a>
-              <a href="mailto:info@walydentalclinic.com" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="mailto:walydentalclinic@gmail.com" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
                 <Mail className="w-5 h-5" />
                 <span>{t('footer.contact.email')}</span>
               </a>
-              <div className="flex items-center gap-3 text-gray-600">
+              {/* <div className="flex items-center gap-3 text-gray-600">
                 <Clock className="w-5 h-5" />
                 <span>{t('footer.contact.hours')}</span>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
@@ -96,8 +96,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="relative w-full h-48 rounded-xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27638.837958275165!2d31.327145!3d30.058098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e5707546d27%3A0x5e62c2d841e6f7b1!2sNasr%20City%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1709321037180!5m2!1sen!2seg"
-                className="absolute inset-0 w-full h-full border-0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.560581391391!2d31.142121484886083!3d29.992055981901327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145845be40122343%3A0x896fabaa2105d9ad!2sWaly%20Dental%20Clinic!5e0!3m2!1sar!2seg!4v1739965915834!5m2!1sar!2seg"                className="absolute inset-0 w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

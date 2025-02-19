@@ -13,7 +13,7 @@ import {
 const services = [
   { icon: Stethoscope, key: 'general', color: 'blue' },
   { icon: Sparkles, key: 'cosmetic', color: 'purple' },
-  { icon: Brain, key: 'orthodontics', color: 'indigo' },
+  { icon: Stethoscope, key: 'orthodontics', color: 'indigo' },
   { icon: Syringe, key: 'implants', color: 'pink' },
   { icon: Baby, key: 'pediatric', color: 'green' },
   { icon: Scissors, key: 'surgery', color: 'red' }
