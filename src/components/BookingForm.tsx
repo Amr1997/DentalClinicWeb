@@ -18,7 +18,7 @@ const BookingForm: React.FC = () => {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="booking-form" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
       
       <div className="container mx-auto px-4 relative">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
@@ -31,6 +31,13 @@ const Hero: React.FC = () => {
     { value: '15+', label: t('stats.experience'), icon: Stethoscope },
     { value: '4.9', label: t('stats.rating'), icon: Star }
   ];
+
+  const scrollToElement = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="min-h-screen relative overflow-hidden">
@@ -158,6 +165,7 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="glass-button bg-blue-600 text-white"
+                onClick={() => scrollToElement('booking-form')}
               >
                 <span className="flex items-center justify-center gap-2">
                   <CalendarCheck className="w-5 h-5" />
@@ -169,6 +177,7 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="glass-button bg-white/80 text-blue-600"
+                onClick={() => scrollToElement('footer')}
               >
                 <span className="flex items-center justify-center gap-2">
                   <Phone className="w-5 h-5" />

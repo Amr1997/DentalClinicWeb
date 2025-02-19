@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative bg-white overflow-hidden">
+    <footer id="footer" className="relative bg-white overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-purple-50/50" />
       
