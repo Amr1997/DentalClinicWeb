@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { motion } from 'framer-motion';
 import { Calendar, Phone, User, Send } from 'lucide-react';
+import { track } from '@vercel/analytics';
 
 const BookingForm: React.FC = () => {
   const { t } = useTranslation();
@@ -14,6 +15,11 @@ const BookingForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Name: ${name}%0APhone: ${phone}%0ADate: ${date?.toLocaleDateString()}`;
+    track('booking_submitted', {
+      name: name,
+      phone: phone,
+      date: date?.toLocaleDateString() || '',
+    });
     window.open(`https://wa.me/+201002122127?text=${message}`, '_blank');
   };
 
