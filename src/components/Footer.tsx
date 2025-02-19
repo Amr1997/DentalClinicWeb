@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     { icon: Facebook, href: 'https://www.facebook.com/walydentalclinic1', color: 'hover:text-blue-600' },
     { icon: Instagram, href: 'https://www.instagram.com/walydentalclinic1', color: 'hover:text-pink-600' },
     { icon: Youtube, href: 'https://www.youtube.com/@walydentalclinic1', color: 'hover:text-red-600' },
-    { icon: MessageCircle, href: 'https://wa.me/+201040758105', color: 'hover:text-green-600' }
+    { icon: MessageCircle, href: 'https://wa.me/+201002122127', color: 'hover:text-green-600' }
   ];
 
   return (
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
               {t('footer.contact.title')}
             </h3>
             <div className="space-y-4">
-              <a href="tel:+2201002122127" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="tel:+201002122127" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
                 <Phone className="w-5 h-5" />
                 <span>{t('footer.contact.phone')}</span>
               </a>
