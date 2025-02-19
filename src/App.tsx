@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
 import Hero from './components/Hero';
@@ -10,6 +10,16 @@ import './i18n/i18n';
 
 function App() {
   const { i18n } = useTranslation();
+
+  useEffect(() => {
+    // Ensure Arabic is set as default
+    if (i18n.language !== 'ar') {
+      i18n.changeLanguage('ar');
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'ar';
+      document.documentElement.className = 'font-arabic';
+    }
+  }, [i18n]);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'ar' : 'en';
