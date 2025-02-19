@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import SocialFeed from './components/SocialFeed';
@@ -44,6 +45,7 @@ function App() {
       <SocialFeed />
       <BookingForm />
       <Footer />
+      <Analytics />
     </div>
   );
 }
