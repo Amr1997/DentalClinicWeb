@@ -89,9 +89,50 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.2 }}
               className="inline-block mb-6"
             >
-              <span className="glass-card px-6 py-2 rounded-full text-blue-600 font-semibold inline-block">
-                {t('hero.badge')}
-              </span>
+              <motion.div 
+                className="relative bg-white/10 backdrop-blur-lg p-4 rounded-2xl border border-white/20 shadow-xl flex items-center justify-center w-64 overflow-hidden"
+                whileHover={{ 
+                  scale: 1.03,
+                  boxShadow: "0 25px 30px -12px rgba(0, 0, 0, 0.15)",
+                  borderColor: "rgba(255, 255, 255, 0.3)"
+                }}
+                animate={{
+                  boxShadow: [
+                    "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+                    "0 25px 30px -12px rgba(0, 0, 0, 0.15)",
+                    "0 20px 25px -5px rgba(0, 0, 0, 0.1)"
+                  ]
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/10 to-blue-500/5"
+                  animate={{
+                    backgroundPosition: ["0% 0%", "100% 100%"],
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                <motion.img
+                  src="/src/assets/images/logo.png"
+                  alt="Dental Clinic Logo"
+                  className="h-24 w-72 object-cover relative z-10 scale-125"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ 
+                    duration: 0.5,
+                    ease: "easeOut"
+                  }}
+                />
+              </motion.div>
             </motion.div>
             
             <motion.h1 
