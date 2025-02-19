@@ -1,0 +1,19 @@
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://walydentalclinic.vercel.app/sitemap.xml
+
+# Specify the main pages to crawl
+Allow: /index.html
+Allow: /services
+Allow: /booking
+Allow: /contact
+
+# Specify crawl delay (optional)
+Crawl-delay: 10
+
+# Disallow any temporary or test pages (if any)
+Disallow: /temp/
+Disallow: /test/ 
