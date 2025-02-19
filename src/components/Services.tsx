@@ -40,13 +40,13 @@ const Services: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="glass-card px-6 py-2 rounded-full text-blue-600 font-semibold inline-block mb-4"
           >
-            Our Expertise
+            {t('services.badge')}
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             {t('services.title')}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Comprehensive dental care with cutting-edge technology and expert specialists
+            {t('services.subtitle')}
           </p>
         </motion.div>
 
@@ -78,7 +78,7 @@ const Services: React.FC = () => {
                 {t(`services.items.${service.key}`)}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Professional care tailored to your needs with the latest techniques and equipment.
+                {t('services.itemDescription')}
               </p>
               
               <motion.div

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     { icon: Facebook, href: 'https://www.facebook.com/walydentalclinic1', color: 'hover:text-blue-600' },
     { icon: Instagram, href: 'https://www.instagram.com/walydentalclinic1', color: 'hover:text-pink-600' },
     { icon: Youtube, href: 'https://www.youtube.com/@walydentalclinic1', color: 'hover:text-red-600' },
-    { icon: MessageCircle, href: 'https://wa.me/+201234567890', color: 'hover:text-green-600' }
+    { icon: MessageCircle, href: 'https://wa.me/+201040758105', color: 'hover:text-green-600' }
   ];
 
   return (
@@ -28,9 +28,11 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold text-gray-900">Waly Dental Clinic</h3>
+            <h3 className="text-2xl font-bold text-gray-900">
+              {t('footer.clinic.title')}
+            </h3>
             <p className="text-gray-600 leading-relaxed">
-              State-of-the-art dental clinic providing comprehensive care with advanced technology.
+              {t('footer.clinic.description')}
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social, index) => (
@@ -56,19 +58,21 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-6"
           >
-            <h3 className="text-lg font-semibold text-gray-900">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-gray-900">
+              {t('footer.contact.title')}
+            </h3>
             <div className="space-y-4">
-              <a href="tel:+201234567890" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="tel:+201040758105" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
                 <Phone className="w-5 h-5" />
-                <span>+20 123 456 7890</span>
+                <span>{t('footer.contact.phone')}</span>
               </a>
               <a href="mailto:info@walydentalclinic.com" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
                 <Mail className="w-5 h-5" />
-                <span>info@walydentalclinic.com</span>
+                <span>{t('footer.contact.email')}</span>
               </a>
               <div className="flex items-center gap-3 text-gray-600">
                 <Clock className="w-5 h-5" />
-                <span>Sun - Thu: 10:00 - 22:00</span>
+                <span>{t('footer.contact.hours')}</span>
               </div>
             </div>
           </motion.div>
@@ -80,12 +84,14 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-6 lg:col-span-2"
           >
-            <h3 className="text-lg font-semibold text-gray-900">Location</h3>
+            <h3 className="text-lg font-semibold text-gray-900">
+              {t('footer.location.title')}
+            </h3>
             <div className="flex items-start gap-3 text-gray-600">
               <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
               <div>
-                <p className="font-medium">Main Branch:</p>
-                <p>123 El-Nasr Street, Nasr City, Cairo, Egypt</p>
+                <p className="font-medium">{t('footer.location.mainBranch')}</p>
+                <p>{t('footer.location.address')}</p>
               </div>
             </div>
             <div className="relative w-full h-48 rounded-xl overflow-hidden">
@@ -109,14 +115,14 @@ const Footer: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600">
-              © {new Date().getFullYear()} Waly Dental Clinic. All rights reserved.
+              {t('footer.legal.copyright', { year: new Date().getFullYear() })}
             </p>
             <div className="flex items-center gap-6">
               <a href="/privacy" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Privacy Policy
+                {t('footer.legal.privacy')}
               </a>
               <a href="/terms" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Terms of Service
+                {t('footer.legal.terms')}
               </a>
             </div>
           </div>

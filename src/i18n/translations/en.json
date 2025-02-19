@@ -11,7 +11,20 @@
     "contact": "Contact Us"
   },
   "services": {
+    "badge": "Our Expertise",
     "title": "Our Services",
+    "subtitle": "Comprehensive dental care with cutting-edge technology and expert specialists",
+    "itemDescription": "Professional care tailored to your needs with the latest techniques and equipment",
+    "features": {
+      "scheduling": {
+        "title": "Flexible Scheduling",
+        "description": "Choose a time that works best for you"
+      },
+      "confirmation": {
+        "title": "Instant Confirmation",
+        "description": "Receive immediate booking confirmation"
+      }
+    },
     "items": {
       "general": "General Dentistry",
       "cosmetic": "Cosmetic Dentistry",
@@ -24,19 +37,79 @@
   "social": {
     "title": "Doctor Talk",
     "subtitle": "Follow us on social media for daily dental tips and updates",
+    "posts": {
+      "video": {
+        "title": "Dental Care Tips",
+        "cta": "Visit tiktok"
+      },
+      "image": {
+        "title": "Before & After",
+        "cta": "Visit instagram"
+      },
+      "testimonial": {
+        "title": "Patient Testimonial",
+        "cta": "Visit facebook"
+      }
+    },
+    "visit": "Visit {platform}",
     "platforms": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "tiktok": "TikTok"
+    },
+    "platformNames": {
       "facebook": "Facebook",
       "instagram": "Instagram",
       "tiktok": "TikTok"
     }
   },
   "booking": {
+    "badge": "Book Now",
     "title": "Book Your Appointment",
+    "subtitle": "Take a step towards your healthy smile",
+    "description": "Schedule your appointment today and take the first step towards your perfect smile",
     "form": {
       "name": "Full Name",
       "phone": "Phone Number",
       "date": "Preferred Date",
       "submit": "Book via WhatsApp"
+    },
+    "features": {
+      "scheduling": {
+        "title": "Flexible Scheduling",
+        "description": "Choose a time that works best for you"
+      },
+      "confirmation": {
+        "title": "Instant Confirmation",
+        "description": "Receive immediate booking confirmation"
+      }
+    }
+  },
+  "stats": {
+    "patients": "Happy Patients",
+    "experience": "Years Experience",
+    "rating": "Patient Rating"
+  },
+  "footer": {
+    "clinic": {
+      "title": "Waly Dental Clinic",
+      "description": "State-of-the-art dental clinic providing comprehensive care with advanced technology"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "phone": "+20 104 075 8105",
+      "email": "info@walydentalclinic.com",
+      "hours": "Sun - Thu: 10:00 - 22:00"
+    },
+    "location": {
+      "title": "Location",
+      "mainBranch": "Main Branch:",
+      "address": "123 El-Nasr Street, Nasr City, Cairo, Egypt"
+    },
+    "legal": {
+      "copyright": "© {year} Waly Dental Clinic. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
     }
   }
 }

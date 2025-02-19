@@ -14,7 +14,7 @@ const BookingForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Name: ${name}%0APhone: ${phone}%0ADate: ${date?.toLocaleDateString()}`;
-    window.open(`https://wa.me/+201234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/+201040758105?text=${message}`, '_blank');
   };
 
   return (
@@ -35,13 +35,13 @@ const BookingForm: React.FC = () => {
                 transition={{ delay: 0.2 }}
                 className="inline-block px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-semibold mb-4"
               >
-                Book Now
+                {t('booking.badge')}
               </motion.span>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 {t('booking.title')}
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Schedule your appointment today and take the first step towards your perfect smile
+                {t('booking.description')}
               </p>
               
               <div className="space-y-6">
@@ -50,8 +50,8 @@ const BookingForm: React.FC = () => {
                     <Calendar className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Flexible Scheduling</h3>
-                    <p className="text-gray-600">Choose a time that works best for you</p>
+                    <h3 className="font-semibold">{t('booking.features.scheduling.title')}</h3>
+                    <p className="text-gray-600">{t('booking.features.scheduling.description')}</p>
                   </div>
                 </div>
                 
@@ -60,8 +60,8 @@ const BookingForm: React.FC = () => {
                     <Phone className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Instant Confirmation</h3>
-                    <p className="text-gray-600">Receive immediate booking confirmation</p>
+                    <h3 className="font-semibold">{t('booking.features.confirmation.title')}</h3>
+                    <p className="text-gray-600">{t('booking.features.confirmation.description')}</p>
                   </div>
                 </div>
               </div>

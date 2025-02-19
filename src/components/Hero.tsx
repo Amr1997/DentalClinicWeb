@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
 
   const stats = [
     { value: '1000+', label: t('stats.patients'), icon: HeartPulse },
-    { value: '15+', label: t('stats.experience'), icon: Stethoscope },
+    { value: '3+', label: t('stats.experience'), icon: Stethoscope },
     { value: '4.9', label: t('stats.rating'), icon: Star }
   ];
 

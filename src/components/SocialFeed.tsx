@@ -3,30 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Instagram, Facebook, Video, ExternalLink } from 'lucide-react';
 
-const socialPosts = [
-  {
-    type: 'video',
-    platform: 'tiktok',
-    thumbnail: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80',
-    title: 'Dental Care Tips',
-    url: 'https://www.tiktok.com/@walydentalclinic1'
-  },
-  {
-    type: 'image',
-    platform: 'instagram',
-    thumbnail: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80',
-    title: 'Before & After',
-    url: 'https://www.instagram.com/walydentalclinic1'
-  },
-  {
-    type: 'video',
-    platform: 'facebook',
-    thumbnail: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80',
-    title: 'Patient Testimonial',
-    url: 'https://www.facebook.com/walydentalclinic1'
-  }
-];
-
 const platformIcons = {
   instagram: Instagram,
   facebook: Facebook,
@@ -36,6 +12,35 @@ const platformIcons = {
 const SocialFeed: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
+
+  const socialPosts = [
+    {
+      type: 'video',
+      platformKey: 'tiktok',
+      thumbnail: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80',
+      titleKey: 'social.posts.video.title',
+      url: 'https://www.tiktok.com/@walydentalclinic1'
+    },
+    {
+      type: 'image',
+      platformKey: 'instagram',
+      thumbnail: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80',
+      titleKey: 'social.posts.image.title',
+      url: 'https://www.instagram.com/walydentalclinic1'
+    },
+    {
+      type: 'video',
+      platformKey: 'facebook',
+      thumbnail: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80',
+      titleKey: 'social.posts.testimonial.title',
+      url: 'https://www.facebook.com/walydentalclinic1'
+    }
+  ];
+
+  const posts = socialPosts.map(post => ({
+    ...post,
+    platform: t(`social.platforms.${post.platformKey}`)
+  }));
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -62,8 +67,8 @@ const SocialFeed: React.FC = () => {
         </motion.div>
 
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${isRTL ? 'rtl' : 'ltr'}`}>
-          {socialPosts.map((post, index) => {
-            const Icon = platformIcons[post.platform as keyof typeof platformIcons];
+          {posts.map((post, index) => {
+            const Icon = platformIcons[post.platformKey as keyof typeof platformIcons];
             
             return (
               <motion.a
@@ -80,7 +85,7 @@ const SocialFeed: React.FC = () => {
                 <div className="glass-card rounded-2xl overflow-hidden aspect-video relative">
                   <img
                     src={post.thumbnail}
-                    alt={post.title}
+                    alt={t(post.titleKey)}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
@@ -90,9 +95,9 @@ const SocialFeed: React.FC = () => {
                   </div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-white font-semibold text-lg mb-2">{post.title}</h3>
+                    <h3 className="text-white font-semibold text-lg mb-2">{t(post.titleKey)}</h3>
                     <span className="inline-flex items-center gap-2 text-blue-200 text-sm">
-                      Visit {post.platform}
+                      {/* {t('social.visit', { platform: t(`social.platforms.${post.platformKey}`) })} */}
                       <ExternalLink className="w-4 h-4" />
                     </span>
                   </div>
