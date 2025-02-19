@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
               {t('footer.contact.title')}
             </h3>
             <div className="space-y-4">
-              <a href="tel:+201040758105" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="tel:+2201002122127" className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors">
                 <Phone className="w-5 h-5" />
                 <span>{t('footer.contact.phone')}</span>
               </a>

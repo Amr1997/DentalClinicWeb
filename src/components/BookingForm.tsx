@@ -14,7 +14,7 @@ const BookingForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Name: ${name}%0APhone: ${phone}%0ADate: ${date?.toLocaleDateString()}`;
-    window.open(`https://wa.me/+201040758105?text=${message}`, '_blank');
+    window.open(`https://wa.me/+201002122127?text=${message}`, '_blank');
   };
 
   return (
