@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Waly Dental Clinic - Expert Dental Care in Egypt",
+    "description": "Leading dental clinic in Egypt offering comprehensive dental services. Book your appointment today for expert dental care with state-of-the-art technology."
+  },
+  "hero": {
+    "badge": "Leading Dental Care",
+    "title": "Expert Dental Care for Your Perfect Smile",
+    "subtitle": "State-of-the-art dental clinic in Egypt providing comprehensive care with advanced technology",
+    "cta": "Book Appointment",
+    "contact": "Contact Us"
+  },
+  "services": {
+    "title": "Our Services",
+    "items": {
+      "general": "General Dentistry",
+      "cosmetic": "Cosmetic Dentistry",
+      "orthodontics": "Orthodontics",
+      "implants": "Dental Implants",
+      "pediatric": "Pediatric Dentistry",
+      "surgery": "Oral Surgery"
+    }
+  },
+  "social": {
+    "title": "Doctor Talk",
+    "subtitle": "Follow us on social media for daily dental tips and updates",
+    "platforms": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "tiktok": "TikTok"
+    }
+  },
+  "booking": {
+    "title": "Book Your Appointment",
+    "form": {
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "date": "Preferred Date",
+      "submit": "Book via WhatsApp"
+    }
+  }
+}
