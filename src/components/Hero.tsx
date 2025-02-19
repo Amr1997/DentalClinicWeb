@@ -11,6 +11,7 @@ import {
   HeartPulse,
   Star
 } from 'lucide-react';
+import logo from '../assets/images/logo.png';
 
 const Hero: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -129,8 +130,8 @@ const Hero: React.FC = () => {
                   }}
                 />
                 <motion.img
-                  src="/src/assets/images/logo.png"
-                  alt="Dental Clinic Logo"
+                  src={logo}
+                  alt="Waly Dental Clinic"
                   className="h-24 w-72 object-cover relative z-10 scale-125"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
