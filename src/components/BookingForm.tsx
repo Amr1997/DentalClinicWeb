@@ -14,7 +14,7 @@ const BookingForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Name: ${name}%0APhone: ${phone}%0ADate: ${date?.toLocaleDateString()}`;
+    const message = `حجز كشف%0AName: ${name}%0APhone: ${phone}%0ADate: ${date?.toLocaleDateString()}`;
     track('booking_submitted', {
       name: name,
       phone: phone,
